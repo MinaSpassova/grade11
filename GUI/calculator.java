@@ -83,23 +83,24 @@ public class calculator {
     }
 
     public static void calculate(char operator, JTextField textBox1, JTextField textBox2, JLabel result) {
-        double num1 = Double.parseDouble(textBox1.getText()); // converted text into double.
-        double num2 = Double.parseDouble(textBox2.getText()); // converted text into double.
+        double num1 = Double.parseDouble(textBox1.getText()); 
+        double num2 = Double.parseDouble(textBox2.getText()); 
         switch (operator) {
             case '+':
-                result.setText(String.valueOf(num1 + num2)); //displayed the result
+                result.setText(String.valueOf(num1 + num2)); 
                 break;
             case '-':
-                result.setText(String.valueOf(num1 - num2)); //displayed the result
+                result.setText(String.valueOf(num1 - num2)); 
                 break;
             case '*':
-                result.setText(String.valueOf(num1 * num2)); //displayed the result
+                result.setText(String.valueOf(num1 * num2)); 
                 break;
             case '/':
                 if (num2 == 0) {
                     result.setText("can't divide by zero");
                 }
-                result.setText(String.valueOf(num1 / num2)); //displayed the result
+                else{result.setText(String.valueOf(num1 / num2)); 
+                    }
                 break;
         }
     }
